@@ -26,20 +26,18 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-gallery.style.display = "flex";
-gallery.style.flexWrap = "wrap";
-gallery.style.gap = "15px";
 
 const elements = images.map((image) => {
+  const liEl = document.createElement("li");
+  liEl.classList.add("gallery-item"); 
+
   const imgEl = document.createElement("img");
   imgEl.classList.add("gallery-img"); 
   imgEl.src = image.url;
   imgEl.alt = image.alt;
-  imgEl.width = "320";
-  imgEl.style.display = "block";
-  imgEl.style.borderRadius = "8px";
   
-  return imgEl;
+  liEl.appendChild(imgEl);
+  return liEl;
 })
 
 gallery.append(...elements);

@@ -25,10 +25,6 @@ function createBoxes(amount) {
 
   boxes.innerHTML = '';
   boxes.append(...elements);
-  boxes.style.display = "flex";
-  boxes.style.flexWrap = "wrap";
-  boxes.style.paddingTop = "15px";
-  boxes.style.gap = "15px";
 }
 
 function destroyBoxes() {
